@@ -67,8 +67,8 @@ interface Productioncompany {
   name: string;
   origin_country: string;
 }
-
-interface Genre {
+ 
+export interface Genre {
   id: number;
   name: string;
 }

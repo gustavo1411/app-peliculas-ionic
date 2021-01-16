@@ -1,16 +1,30 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content color="dark">
+  
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <h2>Favoritos</h2>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+
+<div *ngFor="let pelicula of favoritoGenero">
+  
+  <ion-grid *ngIf="pelicula.pelis.length > 0">
+    <ion-row>
+      <ion-col>
+        <h4>{{ pelicula.genero }}</h4>
+      </ion-col>
+    </ion-row>
+    
+    <app-slides-show-poster [peliculas]="pelicula.pelis"></app-slides-show-poster>
+
+  </ion-grid>
+  
+
+</div>
+
 
 </ion-content>
